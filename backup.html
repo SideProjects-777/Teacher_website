@@ -16,7 +16,8 @@
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="backup/css/styles.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -30,6 +31,15 @@
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item dropdown">
+                            <a onclick="myFunction()" class="nav-link dropdown-toggle dropbtn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            DE
+                            </a>
+                            <div class="dropdown-content" id="navbarDropdown">
+                              <a class="dropdown-item" href="#">EN</a>
+                              <a class="dropdown-item" href="#">RU</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -252,6 +262,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="js/custom.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
