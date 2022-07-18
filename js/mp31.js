@@ -1,15 +1,9 @@
-let track_art = document.querySelector(".track-art");
-let track_name = document.querySelector(".track-name");
-let track_artist = document.querySelector(".track-artist");
-
-let playpause_btn = document.querySelector(".playpause-track");
-let next_btn = document.querySelector(".next-track");
-let prev_btn = document.querySelector(".prev-track");
-
-let seek_slider = document.querySelector(".seek_slider");
-let volume_slider = document.querySelector(".volume_slider");
-let curr_time = document.querySelector(".current-time");
-let total_duration = document.querySelector(".total-duration");
+let track_name = document.querySelector(".track-name-1");
+let playpause_btn = document.querySelector(".playpause-track-1");
+let seek_slider = document.querySelector(".seek_slider-1");
+let volume_slider = document.querySelector(".volume_slider-1");
+let curr_time = document.querySelector(".current-time-1");
+let total_duration = document.querySelector(".total-duration-1");
 
 let track_index = 0;
 let isPlaying = false;
@@ -26,64 +20,62 @@ let track_list = [
     extension: "audio/ogg"
   },
   {
-    name: "Das deutsche Alphabet 1",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3",
+    name: "Alphabet 1",
+    path: "./assets/mp3/1.ogg",
     extension: "audio/ogg"
   },
   {
-    name: "Das deutsche Alphabet 2",
-    path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
+    name: "Alphabet 2",
+    path: "./assets/mp3/2.ogg",
     extension: "audio/ogg"
   },
 ];
 
-function loadTrack(track_index) {
+
+function loadTrack1(track_index) {
   clearInterval(updateTimer);
-  resetValues();
+  resetValues1();
   curr_track.src = track_list[track_index].path;
   curr_track.type = track_list[track_index].extension;
   curr_track.load();
   track_name.textContent = track_list[track_index].name;
 
-  updateTimer = setInterval(seekUpdate, 1000);
+  updateTimer = setInterval(seekUpdate1, 1000);
 }
 
-function resetValues() {
+function resetValues1() {
   curr_time.textContent = "00:00";
   total_duration.textContent = "00:00";
   seek_slider.value = 0;
 }
 
-// Load the first track in the tracklist
-loadTrack(track_index);
-
-function playpauseTrack(track_index) {
-  if (!isPlaying) playTrack(track_index);
-  else pauseTrack();
+function playpauseTrack1() {
+  if (!isPlaying) playTrack1();
+  else pauseTrack1();
 }
 
-function playTrack(track_index) {
+function playTrack1() {
   curr_track.play();
   isPlaying = true;
   playpause_btn.innerHTML = '<i class="bi bi-pause iconsSize"></i>';
 }
 
-function pauseTrack() {
+function pauseTrack1() {
   curr_track.pause();
   isPlaying = false;
   playpause_btn.innerHTML = '<i class="bi bi-play iconsSize"></i>';;
 }
 
-function seekTo() {
+function seekTo1() {
   let seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
 }
 
-function setVolume() {
+function setVolume1() {
   curr_track.volume = volume_slider.value / 100;
 }
 
-function seekUpdate() {
+function seekUpdate1() {
   let seekPosition = 0;
 
   if (!isNaN(curr_track.duration)) {

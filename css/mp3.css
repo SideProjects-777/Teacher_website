@@ -3,12 +3,23 @@
     font-size: 5em;
 }
 
+.volumeIcon{
+    font-weight: 900; 
+    font-size: 2em;
+}
+
+.marginBottom{
+    margin-bottom:5%;
+
+}
+
 .player {
    /* height: 95vh;*/
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 10%;
   }
   
   .details {
@@ -16,7 +27,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 10%;
   }
   
   .track-art {
@@ -31,27 +42,20 @@
   .now-playing {
     font-size: 1rem;
   }
+
   
-  .track-name {
-    font-size: 3rem;
-  }
-  
-  .track-artist {
-    font-size: 1.5rem;
-  }
-  
-  .buttons {
+.buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
+}
   
-  .playpause-track, .prev-track, .next-track { 
+  .playpause-track-1, .playpause-track-2,.playpause-track-3 { 
     /* Smoothly transition the opacity */
     transition: opacity .2s;
   }
   
-  .playpause-track:hover, .prev-track:hover, .next-track:hover {
+  .playpause-track-1:hover, .playpause-track-2:hover, .playpause-track-3:hover  {
     opacity: 1.0;
   }
   
@@ -64,7 +68,7 @@
   }
   
   /* Modify the appearance of the slider */
-  .seek_slider, .volume_slider {
+  .seek_slider-1, .volume_slider-1, .seek_slider-2, .volume_slider-2,  .seek_slider-3, .volume_slider-3 {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -76,7 +80,7 @@
   }
   
   /* Modify the appearance of the slider thumb */
-  .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  .seek_slider-1::-webkit-slider-thumb, .volume_slider-1::-webkit-slider-thumb, .seek_slider-2::-webkit-slider-thumb, .volume_slider-2::-webkit-slider-thumb, .seek_slider-3::-webkit-slider-thumb, .volume_slider-3::-webkit-slider-thumb {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -87,19 +91,20 @@
     border-radius: 50%;
   }
   
-  .seek_slider:hover, .volume_slider:hover {
+  .seek_slider-1:hover, .volume_slider-1:hover, .seek_slider-2:hover, .volume_slider-2:hover, .seek_slider-3:hover, .volume_slider-3:hover {
     opacity: 1.0;
   }
   
-  .seek_slider {
+  .seek_slider-1, .seek_slider-2, .seek_slider-3 {
     width: 60%;
   }
+
   
-  .volume_slider {
+  .volume_slider-1, .volume_slider-2 , .volume_slider-3  {
     width: 30%;
   }
   
-  .current-time, .total-duration {
+  .current-time-1, .total-duration-1, .current-time-2, .total-duration-2, .current-time-3, .total-duration-3 {
     padding: 10px;
   }
   

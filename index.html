@@ -122,70 +122,59 @@
             </div>
         </section>
         <!-- Portfolio-->
-        <div id="portfolio"  class="page-section">
-            <div class="container-fluid px-4 px-lg-5">
+        <div id="portfolio">
+            <div class="container px-4 px-lg-5">
                 <h2 class="text-center mt-0">Podscasts</h2>
                 <hr class="divider" />
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
+                        
+
+
                         <div class="player">
                             <div class="details">
-                              <div class="track-name">Track Name</div>
+                              <h3 class="h4 mb-2 track-name-1">Track Name</h3>
                             </div>
                             <div class="buttons">
-                              <div class="playpause-track" onclick="playpauseTrack(0)"><i class="bi bi-play iconsSize"></i></div>
+                              <div class="playpause-track-1" onclick="playpauseTrack1()"><i class="bi bi-play iconsSize"></i></div>
                             </div>
                             <div class="slider_container">
-                              <div class="current-time">00:00</div>
-                              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-                              <div class="total-duration">00:00</div>
+                              <div class="current-time-1">00:00</div>
+                              <input type="range" min="1" max="100" value="0" class="seek_slider-1" onchange="seekTo1()">
+                              <div class="total-duration-1">00:00</div>
                             </div>
                             <div class="slider_container">
-                              <i class="bi bi-volume-down"></i>
-                              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-                              <i class="bi bi-volume-up"></i>
+                              <i class="bi bi-volume-down volumeIcon"></i>
+                              <input type="range" min="1" max="100" value="99" class="volume_slider-1" onchange="setVolume1()">
+                              <i class="bi bi-volume-up volumeIcon"></i>
                             </div>
-                          </div>
+                        </div>
+
                     </div>
                     <div class="col-lg-4 col-sm-6">
+
                         <div class="player">
                             <div class="details">
-                              <div class="track-name">Track Name</div>
+                              <h3 class="h4 mb-2 track-name-2">Track Name</h3>
                             </div>
                             <div class="buttons">
-                              <div class="playpause-track" onclick="playpauseTrack(0)"><i class="bi bi-play iconsSize"></i></div>
+                              <div class="playpause-track-2" onclick="playpauseTrack2()"><i class="bi bi-play iconsSize"></i></div>
                             </div>
                             <div class="slider_container">
-                              <div class="current-time">00:00</div>
-                              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-                              <div class="total-duration">00:00</div>
+                              <div class="current-time-2">00:00</div>
+                              <input type="range" min="1" max="100" value="0" class="seek_slider-2" onchange="seekTo2()">
+                              <div class="total-duration-2">00:00</div>
                             </div>
                             <div class="slider_container">
-                              <i class="fa fa-volume-down"></i>
-                              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-                              <i class="fa fa-volume-up"></i>
+                              <i class="bi bi-volume-down volumeIcon"></i>
+                              <input type="range" min="1" max="100" value="99" class="volume_slider-2" onchange="setVolume2()">
+                              <i class="bi bi-volume-up volumeIcon"></i>
                             </div>
-                          </div>
+                        </div>
+
+
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <div class="player">
-                            <div class="details">
-                              <div class="track-name">Track Name</div>
-                            </div>
-                            <div class="buttons">
-                              <div class="playpause-track" onclick="playpauseTrack(1)"><i class="bi bi-play" style="font-weight: 900; font-size: 5em;"></i></div>
-                            </div>
-                            <div class="slider_container">
-                              <div class="current-time">00:00</div>
-                              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-                              <div class="total-duration">00:00</div>
-                            </div>
-                            <div class="slider_container">
-                              <i class="fa fa-volume-down"></i>
-                              <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-                              <i class="fa fa-volume-up"></i>
-                            </div>
-                          </div>
                     </div>
                 </div>
             </div>
@@ -436,7 +425,12 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="js/custom.js"></script>
-        <script src="js/mp3.js"></script>
+        <script src="js/mp31.js"></script>
+        <script src="js/mp32.js"></script>
+        <script>
+            loadTrack1(0);
+            loadTrack2(1);
+        </script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
