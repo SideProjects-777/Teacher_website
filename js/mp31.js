@@ -15,7 +15,7 @@ let curr_track = document.createElement('audio');
 // Define the tracks that have to be played
 let track_list = [
   {
-    name: "Alphabet",
+    name: "Das-deutsche-Alphabet",
     path: "./assets/mp3/Das-deutsche-Alphabet.aac",
     extension: "audio/ogg"
   },
