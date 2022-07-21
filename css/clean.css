@@ -996,6 +996,11 @@ textarea.form-control {
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-blue {
+  --bs-text-opacity: 1;
+  color: rgb(24 94 189 / 50%) !important;
+}
+
 .text-muted {
   --bs-text-opacity: 1;
   color: #6c757d !important;
@@ -1006,9 +1011,15 @@ textarea.form-control {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.bg-primary {
+.bg-primary-blue {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background: linear-gradient(135deg, rgb(24 94 189 / 80%) 0% 100%) !important;
+}
+
+.bg-primary-white {
+  --bs-bg-opacity: 1;
+  background-color:white;
+  color:#0f569f;
 }
 
 .bg-light {
@@ -1071,6 +1082,10 @@ hr.divider-light {
   background-color: #fff;
 }
 
+hr.divider-blue {
+  background-color: rgb(24 94 189 / 80%);
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
@@ -1117,8 +1132,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(45deg, rgb(13 102 7 / 80%) 0 50%, rgb(24 94 189 / 80%) 50% 100%), url(../assets/img/bg-intro.jpg);
-  opacity: 0.6;
+  background: linear-gradient(45deg, rgb(65 192 207 / 40%) 0% 100%), url(../assets/img/bg-intro.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
